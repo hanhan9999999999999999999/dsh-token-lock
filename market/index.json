@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Whale's DSH plugin market",
+    "zh": "鲸鱼的 DSH 插件市场"
+  },
+  "description": {
+    "en": "Self-hosted format-1 index of DSH plugins published by hanhan9999999999999999999.",
+    "zh": "鲸鱼自己托管的 DSH 插件索引，format 1。"
+  },
+  "metadata": {
+    "categories": {
+      "guard": {
+        "title": {
+          "en": "Budget and guard",
+          "zh": "预算与护栏"
+        }
+      }
+    },
+    "labels": {
+      "settings": {
+        "title": {
+          "en": "Settings panel",
+          "zh": "设置面板"
+        }
+      },
+      "observability": {
+        "title": {
+          "en": "Observability",
+          "zh": "可观测"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-token-lock",
+      "title": {
+        "en": "Token Lock",
+        "zh": "Token 护栏"
+      },
+      "description": {
+        "en": "Multi-dimensional token guard: measures what a session spends and what it produces, then nudges or blocks only the wasteful part. Advise by default, enforce behind an explicit switch plus a shadow backtest.",
+        "zh": "多维 token 护栏：衡量一次会话花了多少、产出了多少，只对浪费的那部分提醒或拦截。默认 advise 只劝不拦，enforce 要显式开开关，并先跑影子回测。"
+      },
+      "author": "hanhan9999999999999999999",
+      "homepage": "https://github.com/hanhan9999999999999999999/dsh-token-lock#readme",
+      "repository": {
+        "url": "https://github.com/hanhan9999999999999999999/dsh-token-lock"
+      },
+      "metadata": {
+        "category": "guard",
+        "keywords": [
+          "token",
+          "budget",
+          "guard",
+          "quota",
+          "waste",
+          "observability",
+          "settings",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "settings",
+          "observability"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1794837848,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/hanhan9999999999999999999/dsh-token-lock",
+            "commit": "366145cdac2257e5f9198ac861703cf38b835d03"
+          },
+          "engines": {
+            "dsh": ">=2.0.0"
+          }
+        }
+      ],
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlRva2VuIExvY2siPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxMjNhNGEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgxYTIzIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMiIgZmlsbD0idXJsKCNiZykiLz4KICA8cGF0aCBkPSJNNDggMTRjOS41IDEyLjUgMTUuNSAxOS41IDE1LjUgMjYuNWExNS41IDE1LjUgMCAwIDEtMzEgMEMzMi41IDMzLjUgMzguNSAyNi41IDQ4IDE0WiIgZmlsbD0iIzNmZDBjOSIgb3BhY2l0eT0iLjg1Ii8+CiAgPHJlY3QgeD0iMjkiIHk9IjQ1IiB3aWR0aD0iMzgiIGhlaWdodD0iMjkiIHJ4PSI3LjUiIGZpbGw9IiMwODFhMjMiIHN0cm9rZT0iI2VhZjZmNSIgc3Ryb2tlLXdpZHRoPSIzLjQiLz4KICA8cGF0aCBkPSJNMzcuNSA0NXYtN2ExMC41IDEwLjUgMCAwIDEgMjEgMHY3IiBmaWxsPSJub25lIiBzdHJva2U9IiNlYWY2ZjUiIHN0cm9rZS13aWR0aD0iMy40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0OCIgY3k9IjU3IiByPSIzLjgiIGZpbGw9IiMzZmQwYzkiLz4KICA8cGF0aCBkPSJNNDggNTkuNXY2LjUiIHN0cm9rZT0iIzNmZDBjOSIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K"
+    }
+  ]
+}

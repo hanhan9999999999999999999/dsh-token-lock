@@ -1,5 +1,7 @@
 # dsh-token-lock
 
+> `0.1.0` · MIT · 插件市场索引 [`market/index.json`](market/index.json)
+
 > 给 DSH 装一把锁。**锁的是空转，不是干活。**
 
 它盯着会话里每一次请求花的 token，也盯着这次请求**换来了什么**——
@@ -13,6 +15,33 @@
 
 ## 一、装
 
+### 从插件市场装（最省事）
+
+市场里没有「提交」按钮——**索引地址是主人自己填的**。填一次，以后本仓所有插件都在里面：
+
+```text
+设置 → 插件市场 → 索引来源 → 添加
+https://raw.githubusercontent.com/hanhan9999999999999999999/dsh-token-lock/main/market/index.json
+```
+
+国内网络直连 raw.githubusercontent 不稳时，用同一份文件的 jsDelivr 镜像：
+
+```text
+https://cdn.jsdelivr.net/gh/hanhan9999999999999999999/dsh-token-lock@main/market/index.json
+```
+
+索引是 format 1（由 `@deepseek-ai/dsh-plugin-market-index` 的 `parseMarketIndex` 校验通过），
+`source` 是 `git` 型，钉在 commit 上：
+
+```text
+git+https://github.com/hanhan9999999999999999999/dsh-token-lock.git#<commit>
+```
+
+所以市场装下来的字节与你看到的那次提交完全一致，不会因为 `main` 前进而漂移。
+本机从 git 源装需要能访问 github.com；装不了就走下面的本地 `file:` 方式。
+
+### 从本地目录装（开发时用）
+
 ```bash
 # 1. 登记到 profile（两处都要）
 #    D:\dsh-home\profiles\desktop\package.json
@@ -24,6 +53,9 @@ cd D:/dsh-home/profiles/desktop && pnpm install
 
 # 3. 重启 DSH（这一下必须主人自己来）
 ```
+
+> `file:` 依赖是**实体拷贝**：改了源码必须 `rm -rf node_modules/dsh-token-lock` 再 `pnpm install`，
+> 否则 pnpm 认为已满足、不重拷。
 
 装完打开 `http://127.0.0.1:<port>/token-lock/status` 能看到今日用量与当前姿态，就是活了。
 
