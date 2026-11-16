@@ -21,14 +21,21 @@
 
 ```text
 设置 → 插件市场 → 索引来源 → 添加
-https://raw.githubusercontent.com/hanhan9999999999999999999/dsh-token-lock/main/market/index.json
+
+# 首选（本机实测 200，3522 B，两次复测都通）
+https://fastly.jsdelivr.net/gh/hanhan9999999999999999999/dsh-token-lock@main/market/index.json
 ```
 
-国内网络直连 raw.githubusercontent 不稳时，用同一份文件的 jsDelivr 镜像：
+备用镜像（同一份文件，字节一致，任选其一）：
 
 ```text
-https://cdn.jsdelivr.net/gh/hanhan9999999999999999999/dsh-token-lock@main/market/index.json
+https://gcore.jsdelivr.net/gh/hanhan9999999999999999999/dsh-token-lock@main/market/index.json
+https://testingcf.jsdelivr.net/gh/hanhan9999999999999999999/dsh-token-lock@main/market/index.json
 ```
+
+> 本机实测：`raw.githubusercontent.com` 与 `cdn.jsdelivr.net` 的 TLS 会被切断（curl 返回 000），
+> 这三个 jsDelivr 边缘域名可以直连。索引文件本身就在仓库里
+> （`market/index.json`），换镜像只是换取法，内容不变。
 
 索引是 format 1（由 `@deepseek-ai/dsh-plugin-market-index` 的 `parseMarketIndex` 校验通过），
 `source` 是 `git` 型，钉在 commit 上：
