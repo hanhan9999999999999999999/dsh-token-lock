@@ -1,0 +1,61 @@
+{
+  "name": "dsh-token-lock",
+  "version": "0.1.0",
+  "description": "Multi-dimensional token guard for DSH. Measures what a session actually spends and what it actually produces, then nudges or blocks only the wasteful part. Defaults to advise mode: it cannot deny anything until enforce is explicitly enabled and shadow-backtest misfire rate is under 0.5%.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "token",
+    "budget",
+    "guard",
+    "quota",
+    "waste",
+    "observability",
+    "settings"
+  ],
+  "scripts": {
+    "test": "node --test test/*.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanhan9999999999999999999/dsh-token-lock.git"
+  },
+  "homepage": "https://github.com/hanhan9999999999999999999/dsh-token-lock#readme",
+  "bugs": {
+    "url": "https://github.com/hanhan9999999999999999999/dsh-token-lock/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
